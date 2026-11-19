@@ -13,6 +13,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class DetailActivity extends AppCompatActivity {
     static final String EXTRA_TOPIC_ID = "topic_id";
 
+    // The short banner labels follow the same topic order as the three arrays in arrays.xml.
+    private static final int[] TOPIC_LABELS = {
+            R.string.facilities, R.string.events, R.string.clubs, R.string.support
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +37,11 @@ public class DetailActivity extends AppCompatActivity {
                 R.array.string_array_content);
 
         ImageView detailImage = findViewById(R.id.detailImage);
+        TextView detailTopic = findViewById(R.id.detailTopic);
         TextView detailTitle = findViewById(R.id.detailTitle);
         TextView detailContent = findViewById(R.id.detailContent);
 
+        detailTopic.setText(TOPIC_LABELS[topicId]);
         detailTitle.setText(titles[topicId]);
         detailContent.setText(contents[topicId]);
 
