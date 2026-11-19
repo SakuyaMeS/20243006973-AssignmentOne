@@ -43,6 +43,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/btn_facilities"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -68,6 +69,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_events"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -102,6 +104,7 @@
 
             <!-- Clubs -->
             <LinearLayout
+                android:id="@+id/btn_clubs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -128,6 +131,7 @@
 
             <!-- Support -->
             <LinearLayout
+                android:id="@+id/btn_support"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

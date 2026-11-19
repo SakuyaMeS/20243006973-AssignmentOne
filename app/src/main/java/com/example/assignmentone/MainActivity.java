@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.btn_facilities).setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Facilities clicked",
+                        Toast.LENGTH_SHORT).show());
+
+        findViewById(R.id.btn_events).setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Events clicked",
+                        Toast.LENGTH_SHORT).show());
+
+        findViewById(R.id.btn_clubs).setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Clubs clicked",
+                        Toast.LENGTH_SHORT).show());
+
+        findViewById(R.id.btn_support).setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Support clicked",
+                        Toast.LENGTH_SHORT).show());
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
