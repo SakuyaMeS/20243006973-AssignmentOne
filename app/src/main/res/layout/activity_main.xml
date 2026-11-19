@@ -9,21 +9,22 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8">
+        android:layout_weight="1">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/img_main_banner"
             android:scaleType="centerCrop"
-            android:contentDescription="@string/campus_banner_title" />
+            android:contentDescription="@null" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/banner_scrim"
             android:text="@string/campus_banner_title"
             android:textSize="40sp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:gravity="center"
             android:textAlignment="center" />
 
@@ -33,7 +34,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <LinearLayout
@@ -43,53 +44,61 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/btn_facilities"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/button_selector"
-                android:clickable="true"
-                android:focusable="true">
+                android:orientation="vertical">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btn_facilities"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:padding="?android:attr/listPreferredItemPaddingStart"
                     android:src="@drawable/img_btn_facilities"
                     android:scaleType="fitCenter"
-                    android:contentDescription="@null" />
+                    android:contentDescription="@string/facilities" />
 
                 <TextView
+                    android:id="@+id/label_facilities"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
                     android:text="@string/facilities"
+                    android:textColor="@color/white"
                     android:gravity="center" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/btn_events"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/button_selector"
-                android:clickable="true"
-                android:focusable="true">
+                android:orientation="vertical">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btn_events"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:padding="?android:attr/listPreferredItemPaddingStart"
                     android:src="@drawable/img_btn_events"
                     android:scaleType="fitCenter"
-                    android:contentDescription="@null" />
+                    android:contentDescription="@string/events" />
 
                 <TextView
+                    android:id="@+id/label_events"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
                     android:text="@string/events"
+                    android:textColor="@color/white"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -104,54 +113,62 @@
 
             <!-- Clubs -->
             <LinearLayout
-                android:id="@+id/btn_clubs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/button_selector"
-                android:clickable="true"
-                android:focusable="true">
+                android:orientation="vertical">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btn_clubs"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:padding="?android:attr/listPreferredItemPaddingStart"
                     android:src="@drawable/img_btn_clubs"
                     android:scaleType="fitCenter"
-                    android:contentDescription="@null" />
+                    android:contentDescription="@string/clubs" />
 
                 <TextView
+                    android:id="@+id/label_clubs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
                     android:text="@string/clubs"
+                    android:textColor="@color/white"
                     android:gravity="center" />
 
             </LinearLayout>
 
             <!-- Support -->
             <LinearLayout
-                android:id="@+id/btn_support"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/button_selector"
-                android:clickable="true"
-                android:focusable="true">
+                android:orientation="vertical">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btn_support"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:padding="?android:attr/listPreferredItemPaddingStart"
                     android:src="@drawable/img_btn_support"
                     android:scaleType="fitCenter"
-                    android:contentDescription="@null" />
+                    android:contentDescription="@string/support" />
 
                 <TextView
+                    android:id="@+id/label_support"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
                     android:text="@string/support"
+                    android:textColor="@color/white"
                     android:gravity="center" />
 
             </LinearLayout>
