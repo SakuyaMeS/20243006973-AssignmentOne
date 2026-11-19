@@ -17,6 +17,16 @@
             android:scaleType="centerCrop"
             android:contentDescription="@string/campus_banner_title" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/campus_banner_title"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+
     </FrameLayout>
 
 </LinearLayout>
