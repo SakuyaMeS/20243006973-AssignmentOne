@@ -12,7 +12,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String EXTRA_TOPIC_ID = "topic_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra(EXTRA_TOPIC_ID, 0);
+            intent.putExtra(DetailActivity.EXTRA_TOPIC_ID, 0);
             startActivity(intent);
         });
 
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra(EXTRA_TOPIC_ID, 1);
+            intent.putExtra(DetailActivity.EXTRA_TOPIC_ID, 1);
             startActivity(intent);
         });
 
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra(EXTRA_TOPIC_ID, 2);
+            intent.putExtra(DetailActivity.EXTRA_TOPIC_ID, 2);
             startActivity(intent);
         });
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra(EXTRA_TOPIC_ID, 3);
+            intent.putExtra(DetailActivity.EXTRA_TOPIC_ID, 3);
             startActivity(intent);
         });
 

@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class DetailActivity extends AppCompatActivity {
+    static final String EXTRA_TOPIC_ID = "topic_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,8 @@ public class DetailActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detail);
 
-        int topicId = getIntent().getIntExtra("topic_id", 0);
+        // Topic IDs 0 to 3 select matching entries in the image, title, and content arrays.
+        int topicId = getIntent().getIntExtra(EXTRA_TOPIC_ID, 0);
 
         String[] images = getResources().getStringArray(
                 R.array.string_array_images);
