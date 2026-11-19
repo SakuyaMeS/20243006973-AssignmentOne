@@ -3,4 +3,6 @@
     <string name="campus_banner_title">Welcome to CampusLife - Your Pocket Guide to University of Waikato</string>
     <string name="facilities">Facilities</string>
     <string name="events">Events</string>
+    <string name="clubs">Clubs</string>
+    <string name="support">Support</string>
 </resources>
