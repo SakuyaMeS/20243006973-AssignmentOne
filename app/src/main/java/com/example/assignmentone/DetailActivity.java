@@ -1,6 +1,8 @@
 package com.example.assignmentone;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +17,45 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detail);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        int topicId = getIntent().getIntExtra("topic_id", 0);
+
+        String[] images = getResources().getStringArray(
+                R.array.string_array_images);
+
+        String[] titles = getResources().getStringArray(
+                R.array.string_array_titles);
+
+        String[] contents = getResources().getStringArray(
+                R.array.string_array_content);
+
+        ImageView detailImage = findViewById(R.id.detailImage);
+        TextView detailTitle = findViewById(R.id.detailTitle);
+        TextView detailContent = findViewById(R.id.detailContent);
+
+        detailTitle.setText(titles[topicId]);
+        detailContent.setText(contents[topicId]);
+
+        int imageResource = getResources().getIdentifier(
+                images[topicId].trim(),
+                "drawable",
+                getPackageName());
+
+        detailImage.setImageResource(imageResource);
+
+        ViewCompat.setOnApplyWindowInsetsListener(
+                findViewById(R.id.main), (v, insets) -> {
+
+                    Insets systemBars = insets.getInsets(
+                            WindowInsetsCompat.Type.systemBars());
+
+                    v.setPadding(
+                            systemBars.left,
+                            systemBars.top,
+                            systemBars.right,
+                            systemBars.bottom);
+
+                    return insets;
+                });
     }
 }
